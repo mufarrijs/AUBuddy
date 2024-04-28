@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header class="container main">
+        <a href="index.html" class="logocontainer">
+            <img src="./media/logo.png" alt="aub logo">
+        </a>
+    </header>
+    <div class="quizsection" data-aos="fade-up">
+        <div class="quiz container">
+            <h1>Discover Your Ideal Major</h1>
+    <form id="quizForm">
+        <p>What subjects or courses do you find most engaging and enjoyable in school?</p>
+        <label><input type="radio" name="q1" value="a"> Pure Mathematics</label><br>
+        <label><input type="radio" name="q1" value="b"> Applied Mathematics</label><br>
+        <label><input type="radio" name="q1" value="c"> Life Sciences (Biology)</label><br>
+        <label><input type="radio" name="q1" value="d"> Physical Sciences (Physics, Chemistry)</label><br>
+
+        <p>Are there any specific topics within those subjects that particularly captivate your interest?</p>
+        <label><input type="radio" name="q2" value="a"> Advanced Calculus and Theoretical Mathematics</label><br>
+        <label><input type="radio" name="q2" value="b"> Mathematical Modeling and Optimization</label><br>
+        <label><input type="radio" name="q2" value="c"> Environmental Biology or Ecology</label><br>
+        <label><input type="radio" name="q2" value="d"> Quantum Physics or Organic Chemistry</label><br>
+
+        <p>Have you ever found yourself researching or reading about a subject outside of your regular coursework?</p>
+        <label><input type="radio" name="q3" value="a"> Advanced Theoretical Mathematics Journals</label><br>
+        <label><input type="radio" name="q3" value="b"> Scientific Publications on Applied Mathematics</label><br>
+        <label><input type="radio" name="q3" value="c"> Nature and Wildlife Conservation</label><br>
+        <label><input type="radio" name="q3" value="d"> Cutting-edge Research in Physics or Chemistry</label><br>
+
+        <p>What careers or professions do you admire or find intriguing?</p>
+        <label><input type="radio" name="q4" value="a"> Engineering and Technology</label><br>
+        <label><input type="radio" name="q4" value="b"> Healthcare and Medical Fields</label><br>
+        <label><input type="radio" name="q4" value="c"> Arts, Humanities, or Creative Professions</label><br>
+        <label><input type="radio" name="q4" value="d"> Business, Finance, or Economics</label><br>
+
+        <p>Are there any specific job responsibilities or tasks that appeal to you?</p>
+        <label><input type="radio" name="q5" value="a"> Designing and optimizing chemical processes</label><br>
+        <label><input type="radio" name="q5" value="b"> Providing direct patient care</label><br>
+        <label><input type="radio" name="q5" value="c"> Creating visual content for various purposes</label><br>
+        <label><input type="radio" name="q5" value="d"> Analyzing economic systems and trends</label><br>
+
+        <p>Do you see yourself more involved in:</p>
+        <label><input type="radio" name="q6" value="a"> Developing innovative technologies</label><br>
+        <label><input type="radio" name="q6" value="b"> Improving health and well-being</label><br>
+        <label><input type="radio" name="q6" value="c"> Expressing creativity and artistic talent</label><br>
+        <label><input type="radio" name="q6" value="d"> Analyzing and strategizing in a business context</label><br>
+
+        <p>Outside of academics, what hobbies or activities do you enjoy in your free time?</p>
+        <label><input type="radio" name="q7" value="a"> Outdoor activities and sports</label><br>
+        <label><input type="radio" name="q7" value="b"> Reading and writing</label><br>
+        <label><input type="radio" name="q7" value="c"> Arts and crafts, music, or theater</label><br>
+        <label><input type="radio" name="q7" value="d"> Volunteering and community involvement</label><br>
+
+        <p>Which of the following aligns more with your interests?</p>
+        <label><input type="radio" name="q8" value="a"> Landscape Architecture</label><br>
+        <label><input type="radio" name="q8" value="b"> Art History</label><br>
+        <label><input type="radio" name="q8" value="c"> Graphic Design</label><br>
+        <label><input type="radio" name="q8" value="d"> Sociology-Anthropology</label><br>
+
+        <p>What are your preferred learning environments?</p>
+        <label><input type="radio" name="q9" value="a"> Group discussions and collaborative projects</label><br>
+        <label><input type="radio" name="q9" value="b"> Hands-on projects and experiential learning</label><br>
+        <label><input type="radio" name="q9" value="c"> Independent study and self-paced learning</label><br>
+        <label><input type="radio" name="q9" value="d"> A combination of various learning environments</label><br>
+
+        <p>How do you approach challenges or problem-solving?</p>
+        <label><input type="radio" name="q10" value="a"> Analyzing and finding theoretical solutions</label><br>
+        <label><input type="radio" name="q10" value="b"> Applying practical and real-world solutions</label><br>
+        <label><input type="radio" name="q10" value="c"> Creatively finding innovative solutions</label><br>
+        <label><input type="radio" name="q10" value="d"> Strategizing and making data-driven decisions</label><br>
+
+        <p>Where do you see yourself in five or ten years?</p>
+        <label><input type="radio" name="q11" value="a"> Leading a team or managing projects in a technical field</label><br>
+        <label><input type="radio" name="q11" value="b"> Making a positive impact on people's health or well-being</label><br>
+        <label><input type="radio" name="q11" value="c"> Pursuing creative endeavors or contributing to cultural development</label><br>
+        <label><input type="radio" name="q11" value="d"> Engaged in business, finance, or entrepreneurship</label><br>
+    </form>
+    <button onclick="submitQuiz()">Submit</button>
+    <div id="result"></div>
+        </div>
+    </div>
+    <button class="goback" onclick="window.location.href='choice.html'; return false;">Go Back</button>
+    <script src="./js/script.js"></script>
+</body>
+</html>

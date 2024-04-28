@@ -1,0 +1,627 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --txtcolor: #1B1621;
+    --redcolor: #840032;
+    --landing-bg: #FFF7F2;
+    --Montserrat: "Montserrat";
+    --Rambla: "Rambla";
+    --RamblaBold: "Rambla-bold";
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Rambla;
+    src: url("../fonts/Rambla-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rambla-bold;
+    src: url("../fonts/Rambla-Bold.ttf");
+}
+
+body {
+    background-color: var(--landing-bg);
+    font-family: var(--Rambla);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.container {
+    padding: 1rem;
+    max-width: 100% !important;
+    margin: 0px !important;
+}
+
+header.container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+header.main {
+    position: relative;
+}
+
+header .logocontainer {
+    height: 4rem;
+    width: fit-content;
+    display: block;
+}
+
+header .logocontainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.herosection {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--landing-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.herosection h1 {
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(100%);
+    font-family: var(--Montserrat);
+    animation: 1s ease 0s 1 normal forwards running fadeUp;
+    text-align: center;
+}
+
+.herosection p.description {
+    width: 70%;
+    text-align: center;
+    line-height: 2;
+    color: var(--txtcolor);
+    font-family: var(--Rambla);
+    opacity: 0;
+    transform: translateY(100%);
+    animation: 1s ease 0.3s 1 normal forwards running fadeUp;
+}
+
+.herosection button.getstarted, .herosection button.choiceButton {
+    border: none;
+    color: var(--white);
+    background-color: var(--redcolor);
+    transition: all 0.3s ease-in-out 0s;
+    padding: 1rem 2rem;
+    opacity: 0;
+    border-radius: 1rem;
+    transform: translateY(100%);
+    animation: 1s ease 0.6s 1 normal forwards running fadeUp;
+}
+
+.herosection button.choiceButton#takequiz {
+    animation: 1s ease 0.9s 1 normal forwards running fadeUp;
+}
+
+.herosection button.getstarted:hover, .herosection button.choiceButton:hover {
+    background-color: rgb(114, 0, 44);
+}
+
+.herosection button.getstarted span, .herosection button.choiceButton span {
+    font-size: 1rem;
+    font-family: var(--Rambla);
+}
+
+.herosection button.getstarted i.icon {
+    height: 1.3rem;
+    width: 1.3rem;
+    display: inline-block;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.herosection button.getstarted:hover i.icon {
+    transform: translateX(0.3rem);
+}
+
+.herosection button.getstarted i.icon svg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.welcomesection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.welcomesection h1.welcometitle {
+    font-family: var(--Montserrat);
+    margin-bottom: 2rem;
+}
+
+.welcomesection p.description {
+    width: 80%;
+    line-height: 2;
+    font-family: var(--Rambla);
+    margin-bottom: 2rem;
+}
+
+.welcomesection .topsection {
+    height: 14rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.welcomesection .topsection img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.welcomesection .bottomsection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.welcomesection .bottomsection .leftsection {
+    height: 14rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+}
+
+.welcomesection .bottomsection .rightsection {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.welcomesection .bottomsection .leftsection img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.welcomesection .bottomsection .rightsection img {
+    height: 14rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.welcomesection .bottomsection .rightsection img:last-child {
+    margin-bottom: 0px;
+}
+
+.chart-wrap {
+    width: 100%;
+}
+
+.chart-wrap .row {
+    position: relative;
+    height: 2rem;
+    margin-bottom: 1.3rem;
+    display: flex;
+    flex-flow: row;
+    padding: 0px 0rem 0px 1rem;
+    width: 100%;
+}
+
+.chart-wrap .bar-wrap {
+    position: relative;
+    background: rgb(215, 219, 222);
+    width: 66rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.chart-wrap .bar-wrap .bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: var(--redcolor);
+    transition: all 1s ease 0s;
+    transform: translateX(-100%);
+}
+
+.chart-wrap .bar-wrap .bar.in {
+    transform: translateX(0%);
+}
+
+.chart-wrap .row:nth-of-type(1) .bar {
+    transition: all 1s ease 400ms;
+}
+
+.chart-wrap .row:nth-of-type(2) .bar {
+    transition: all 1s ease 600ms;
+}
+
+.chart-wrap .row:nth-of-type(3) .bar {
+    transition: all 1s ease 800ms;
+}
+
+.chart-wrap .row:nth-of-type(4) .bar {
+    transition: all 1s ease 1000ms;
+}
+
+.chart-wrap .row:nth-of-type(5) .bar {
+    transition: all 1s ease 1200ms;
+}
+
+.chart-wrap .row:nth-of-type(6) .bar {
+    transition: all 1s ease 1400ms;
+}
+
+.chart-wrap .row:nth-of-type(7) .bar {
+    transition: all 1s ease 1600ms;
+}
+
+.chart-wrap .label {
+    width: fit-content;
+    padding: 0px;
+    min-width: 17rem;
+    position: absolute;
+    left: 2rem;
+    top: 0.3rem;
+    z-index: 1;
+    color: white;
+}
+
+span.number {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    right: 0rem;
+    top: 0.3rem;
+    left: auto;
+    width: fit-content;
+}
+
+.chatbotsection {
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../media/Frame.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: center center;
+}
+
+.chatbotsection input {
+    border-radius: 1.5rem;
+    background-color: rgb(242, 239, 239);
+    padding: 0.8rem 1rem;
+    border: none;
+    outline: none;
+}
+
+.tabularview .nav-tabs {
+    border: none;
+}
+
+.tabularview .nav-tabs .nav-item {
+    background-color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-right: 1rem;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+}
+
+.tabularview .nav-tabs .nav-item .nav-link {
+    color: var(--txtcolor);
+}
+
+.tabularview .nav-tabs .nav-item .nav-link.active {
+    border: none;
+    background-color: transparent;
+}
+
+.tabularview .tab-content {
+    background-color: white;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 2rem 0px;
+}
+
+.tabularview .tab-content .document-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.tabularview .tab-content .document-container:last-child {
+    border: none;
+}
+
+.tabularview .tab-content .document-container .document {
+    display: flex;
+    align-items: baseline;
+}
+
+.tabularview .tab-content .document-container .document .docname {
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.tabularview .tab-content .document-container .document:hover .docname {
+    color: var(--redcolor);
+}
+
+.tabularview .tab-content .document-container .document i.icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.8rem;
+}
+
+.tabularview .tab-content .document-container .document i.icon svg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tabularview .tab-content .document-container .downloadbtn {
+    height: 2rem;
+    width: 2rem;
+}
+
+.tabularview .tab-content .document-container .downloadbtn svg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tabularview .tab-content .document-container .downloadbtn svg path#downloadarrow {
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.tabularview .tab-content .document-container .downloadbtn:hover svg path#downloadarrow {
+    transform: translateY(0.2rem);
+}
+
+.tab-pane p.description {
+    padding: 2rem;
+}
+.chatbot{
+    position: relative;
+    bottom: 1rem;
+    left: auto;
+    z-index: 1;
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--redcolor);
+    border-radius: 50%;
+    border: none;
+    top: auto;
+    border: none;
+    float: right;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.chatbot img{
+    height: 2rem;
+    width: 2rem;
+}
+.quizsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    position: relative;
+}
+.quiz.container{
+    background: white;
+    border-radius: 1.5rem;
+    width: 90vw;
+    margin: auto !important;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.quizsection button{
+    background-color: var(--redcolor);
+    transition: all .3s ease-in-out;
+    color: white;
+    border: none;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+form p{
+    margin-top: 2rem;
+    font-family: var(--RamblaBold);
+}
+.cta{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cta .col-lg-4 .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.cta .col-lg-4 .card .card-body{
+    padding: 0;
+}
+.cta .col-lg-4 .card .card-body .card-img-top img{
+height: 100%;
+width: 100%;
+transition: all .3s ease-in-out;
+}
+.cta .col-lg-4 .card:hover .card-body .card-img-top img{
+    transform: scale(1.1);
+}
+.cta .col-lg-4 .card .card-body .card-img-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #03030347;
+}
+.cta .col-lg-4 .card .card-body .card-img-overlay button{
+    background-color: var(--redcolor);
+    transition: all .3s ease-in-out;
+    border: none;
+    color: white;
+    padding: .8rem 2rem;
+    margin: auto;
+    border-radius:1rem;
+    text-align: center;
+}
+.cta .col-lg-4 .card .card-body .card-img-overlay button:hover{
+    background-color: rgb(114, 0, 44);
+}
+.cta.col-lg-4{
+    padding: 0 1rem;
+}
+.emailsection{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+.emailsection button{
+    color: white;
+    background-color: var(--redcolor);
+    transition: all .3s ease-in-out;
+    padding: 0.9rem 3rem;
+    border: none;
+    border-radius:1rem;
+}
+.emailsection button:hover{
+    background-color: rgb(114, 0, 44);
+}
+.emailsection input{
+    width: 100%;
+    margin-right: 1rem;
+    border: none;
+    padding: 1rem;
+    color: lightgrey;
+    border-radius:1rem ;
+}
+.goback{
+    background-color: #840032;
+    transition: all .3s ease-in-out;
+    color: white;
+    border: none;
+    padding: .9rem 3rem;
+    display: block;
+    position: relative;
+    margin: 1rem 5rem;
+    border-radius: 1rem;
+}
+.goback:hover{
+    background-color: rgb(114, 0, 44);
+}
+.moreinfos.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.moreinfos.container .information{
+    border-radius: 1rem;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition:all .3s ease-in-out
+}
+.moreinfos.container .information:hover button{
+    background-color: #fafafa;
+}
+.moreinfos.container .information button[aria-expanded="true"]{
+    background-color: var(--redcolor);
+    color:white
+}
+.moreinfos.container .information button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+    transition: all .3s ease-in-out;
+}
+.moreinfos.container .information .informationans{
+    padding: 2rem;
+    border-top: 1px solid #f4f4f4;
+}
+@media (min-width: 992px) {
+    .chart-wrap .bar-wrap{
+    width: 40rem;
+    }
+    .welcomesection .bottomsection .rightsection{
+        width:50%;
+    }
+    span.number {
+        position: relative;
+        color: var(--txtcolor);
+        left: 0px;
+        right: 0px;
+        top: 0px;
+    }
+
+    .chart-wrap .label {
+        position: relative;
+        width: fit-content;
+        padding: 0px;
+        min-width: 17rem;
+        color: var(--txtcolor);
+        left: 0px;
+        top: 0px;
+    }
+
+    .welcomesection .bottomsection {
+        flex-wrap: nowrap;
+    }
+
+    .herosection h1 {
+        font-size: 3.2rem;
+    }
+
+    .welcomesection .bottomsection .leftsection {
+        height: 22rem;
+        margin-right: 2rem;
+        margin-bottom: 0px;
+    }
+
+    .welcomesection .bottomsection .rightsection img {
+        height: 10rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 1rem 4rem;
+    }
+    .chart-wrap .bar-wrap{
+    width: 78%;
+    }
+}
